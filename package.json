@@ -1,0 +1,17 @@
+{
+  "name": "node-file-system",
+  "version": "1.0.0",
+  "description": "A node file system which describes how to create file in particular folder and how to retrieve all files using node filesystem",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikil",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
