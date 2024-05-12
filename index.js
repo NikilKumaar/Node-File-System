@@ -4,6 +4,9 @@ const path = require("path");
 
 const app = express();
 
+require('dotenv').config()
+const PORT = process.env.PORT;
+const HOSTNAME = process.env.HOSTNAME
 const outputFolder = "./Current_TimeStamp"; //Folder name where files will be stored
 
 //To check whether folder is already there, if not create a new folder
@@ -11,7 +14,6 @@ if (!fs.existsSync(outputFolder)) {
   fs.mkdirSync(outputFolder);
 }
 
-const PORT = 5000;
 
 app.get("/createFile", (req, res) => {
   const currentTime = new Date();
@@ -50,5 +52,5 @@ app.get("/getFiles", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("Server is running on PORT", PORT);
+  console.log(`Server started successfully at http://${HOSTNAME}:${PORT}`);
 });
